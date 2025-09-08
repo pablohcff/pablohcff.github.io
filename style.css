@@ -1,0 +1,128 @@
+/* Reset básico e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+    overflow: auto;
+}
+
+/* Estilo da Seção 1: Apresentação */
+.apresentacao {
+    background-color: #333;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.apresentacao h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.apresentacao .descricao {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+.apresentacao .descricao strong {
+    color: #8c9eff; /* Cor de destaque para as habilidades */
+}
+
+/* Estilo da Seção 2: Projetos */
+.projetos {
+    padding: 4rem 0;
+}
+
+.projetos h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.projeto-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Garante que a imagem não saia das bordas arredondadas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.projeto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
+}
+
+.projeto-card h3 {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.projeto-card p {
+    margin: 0 1rem;
+    flex-grow: 1; /* Faz o parágrafo ocupar o espaço disponível, alinhando os botões */
+}
+
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    margin: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+
+/* Responsividade para telas menores (celulares) */
+@media (max-width: 768px) {
+    .apresentacao h1 {
+        font-size: 2.2rem;
+    }
+
+    .projetos h2 {
+        font-size: 2rem;
+    }
+}
